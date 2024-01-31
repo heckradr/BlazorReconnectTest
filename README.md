@@ -9,7 +9,7 @@ The use-case for this control is for pages / visualizations without user interve
 ## Problem
 Sometimes, after the javascript "location.reload(true)" command, the page crashes. In this case the typical blazor error bar (An unhandled error has occurred. Reload) is shown. In the console the error message "The list of component operations is not valid. (blazor.web.js)" is logged.
 
-I saw this error only if multiple clients (browser windows) reconnects to the same time.
+I saw this error only if multiple clients (browser windows) reconnects at the same time.
 
 ## Steps to reproduce
 
