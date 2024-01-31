@@ -1,0 +1,56 @@
+﻿@using System.Diagnostics
+@inject IJSRuntime jsRuntime;
+
+<div id="components-reconnect-modal" class="custom-reconnect-modal components-reconnect-hide">
+    <div class="show">
+        <div class="reconnect-container">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h5>
+                Trying to restore connection... (<span id="components-reconnect-current-attempt">x</span> / <span id="components-reconnect-max-retries">y</span>)
+            </h5>
+        </div>
+    </div>
+
+    <div class="failed">
+        <div class="reconnect-container">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h5>
+                Connection failed! Reconnecting...
+            </h5>
+        </div>
+    </div>
+
+    <div class="rejected">
+        <div class="reconnect-container">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h5>
+                Connection failed! Reconnecting... @*  <a href="/">Reload</a> *@
+            </h5>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private IJSObjectReference? module;
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Debug.WriteLine("*** OnAfterRenderAsync ***");
+        module = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./Components/ReconnectModal.razor.js");
+    }
+
+    public ValueTask DisposeAsync()
+    {
+        if (module == null)
+            return ValueTask.CompletedTask;
+
+        return module.DisposeAsync();
+    }
+}

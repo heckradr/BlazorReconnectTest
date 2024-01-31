@@ -1,0 +1,76 @@
+﻿#components-reconnect-modal {
+    display: flex;
+}
+
+.components-reconnect-hide {
+    display: none !important;
+}
+
+.components-reconnect-show {
+}
+
+.components-reconnect-failed {
+}
+
+.custom-reconnect-modal {
+    z-index: 1050;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255, 0.8);
+    text-align: center;
+    font-weight: bold;
+    transition: visibility 0s linear 500ms;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-reconnect-modal h5 {
+    margin-top: 15px;
+}
+
+.components-reconnect-hide > div {
+    display: none;
+}
+
+.components-reconnect-show > div {
+    display: none;
+}
+
+.components-reconnect-show > .show {
+    display: block;
+    width: 80%;
+}
+
+.components-reconnect-failed > div {
+    display: none;
+}
+
+.components-reconnect-failed > .failed {
+    display: block;
+    width: 80%;
+}
+
+.components-reconnect-rejected > div {
+    display: none;
+}
+
+.components-reconnect-rejected > .rejected {
+    display: block;
+    width: 80%;
+}
+
+.reconnect-container {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgb(211, 211, 211, 1.0);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 4px 10px 10px 0px hsl(0deg 0% 0% / 20%);
+}
