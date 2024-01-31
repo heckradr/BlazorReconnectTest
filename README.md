@@ -1,7 +1,7 @@
 # BlazorReconnectTest
 
 ## Description
-This sample blazor server project contains a component named "ReconnectModal". The intent of this component is to do an automatic reconnect with javascript if blazor fails to reconnect to the server. This could happen if the maximum retry count of the internal reconnect-mechnism is exceeded or if the (web)-server was restarted. In this case the integrated reconnect does not work and the user has to reload the page. 
+This sample blazor server project contains a component named "ReconnectModal". The intent of this component is to do an automatic reconnect with javascript if blazor fails to reconnect to the server. This could happen if the maximum retry count of the internal reconnect-mechnism is exceeded or if the (web)-server was restarted. In this case the integrated reconnect mechanism does not work and the user has to reload the page. 
 
 The use-case for this control is for pages / visualizations without user intervention (e.g. smart signage, information displays).
 
