@@ -22,3 +22,4 @@ I saw this error only if multiple clients (browser windows) reconnects to the sa
 - when the error occurs one of the 2 pages will stop working with the typical blazor error bar
 - the error does not occur on every attempt, maybe you have to repeat the steps
   
+![image](https://github.com/heckradr/BlazorReconnectTest/assets/48717990/7ef80d1b-69aa-4b0a-b0f1-9dd1ad93abbf)
